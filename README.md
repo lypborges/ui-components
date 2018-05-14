@@ -22,17 +22,32 @@ Usage
 
 Contributing
 ------------------------------------------------------------------------------
+### Todo
+
+- [ ] Table
+- [ ] Button
+- [ ] Select
+- [ ] Form
+- [ ] Modal
+- [ ] Menu
+- [ ] DatePicker
+- [ ] DatePicker Range
+- [ ] Acceptance Test
+- [ ] Docs
+
+
+------------------------------------------------------------------------------
 
 ### Installation
 
 * `git clone <repository-url>`
 * `cd ui-components`
-* `npm install`
+* `yarn install`
 
 ### Linting
 
-* `npm run lint:js`
-* `npm run lint:js -- --fix`
+* `yarn run lint:js`
+* `yarn run lint:js -- --fix`
 
 ### Running tests
 
