@@ -7,9 +7,12 @@ Installation
 ------------------------------------------------------------------------------
 
 ```
-ember install ui-components
+ember install git+https://github.com/lypborges/ui-components.git#master
 ```
 
+```
+ember generate ui-components
+```
 
 Usage
 ------------------------------------------------------------------------------
