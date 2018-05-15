@@ -1,1 +1,7 @@
-<a class="button">Button</a>
+<button type="button" class="btn {{class}}" {{action (perform asyncTask)}}>
+  {{#if asyncTask.isRunning}}
+    Loading
+  {{else}}
+    {{label}}
+  {{/if}}
+</button>

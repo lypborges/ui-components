@@ -1,4 +1,16 @@
-<h2 id="title">Welcome to UI Components</h2>
+{{#docs-viewer as |viewer|}}
 
-{{ui-button}}
-{{outlet}}
+  {{#viewer.nav as |nav|}}
+    {{nav.item 'Introduction' 'docs.index'}}
+    {{nav.item 'Buttons' 'docs.button'}}
+  {{/viewer.nav}}
+
+  {{#viewer.main}}
+    <div class="docs-container">
+      <div class="docs-section">
+        {{outlet}}
+      </div>
+    </div>
+  {{/viewer.main}}
+
+{{/docs-viewer}}
