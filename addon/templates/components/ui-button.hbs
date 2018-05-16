@@ -1,6 +1,6 @@
 <button type="button" class="btn {{class}}" {{action (perform asyncTask)}}>
   {{#if asyncTask.isRunning}}
-    Loading
+    {{fa-icon "spinner" spin=true}}
   {{else}}
     {{label}}
   {{/if}}

@@ -1,5 +1,5 @@
+<h1>Button types!</h1>
 <p>
-  <b>Button types!</b>
   You can pass any class that bootstrap has in a button! <a href="https://getbootstrap.com/docs/4.0/components/buttons/" target="_blank">See options here</a>
 </p>
 {{#docs-demo as |demo|}}
