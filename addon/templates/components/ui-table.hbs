@@ -1,8 +1,8 @@
-{{#light-table table tableClassNames="table table-hover" height='65vh' columns=columns responsive=true onAfterResponsiveChange=(action 'onAfterResponsiveChange') as |t| }}
+{{#light-table table tableClassNames="table table-hover" height='85vh' columns=columns responsive=true onAfterResponsiveChange=(action 'onAfterResponsiveChange') as |t| }}
 
   {{t.head onColumnClick=(action 'onColumnClick') iconSortable='fa fa-sort' iconAscending='fa fa-sort-asc' iconDescending='fa fa-sort-desc' fixed=true}}
 
-    {{#t.body canSelect=false expandOnClick=false onScrolledToBottom=(action 'onScrolledToBottom') as |body| }}
+    {{#t.body canSelect=false expandOnClick=false as |body| }}
       {{#body.expanded-row as |row|}}
         {{ui-expanded-row table=table row=row}}
       {{/body.expanded-row}}

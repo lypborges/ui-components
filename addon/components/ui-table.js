@@ -21,7 +21,7 @@ export default Component.extend({
   layout,
   store: service(),
 
-  page: 0,
+  page: 1,
   limit: 10,
   dir: 'asc',
   sort: 'firstName',
@@ -38,6 +38,11 @@ export default Component.extend({
   init() {
     this._super(...arguments);
     this.set('model', A([]));
+
+    let fecthModel = isEmpty(this.get('model'));
+    if (fecthModel) {
+      this.get('fetchRecords').perform();
+    }
 
     let table = new Table(this.get('columns'), this.get('model'), {
       enableSync: this.get('enableSync')
@@ -80,9 +85,10 @@ export default Component.extend({
           dir: column.ascending ? 'asc' : 'desc',
           sort: column.get('valuePath'),
           canLoadMore: true,
-          page: 0
+          page: 1
         });
         this.get('model').clear();
+        this.get('fetchRecords').perform();
       }
     },
 
