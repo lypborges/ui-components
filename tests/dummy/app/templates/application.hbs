@@ -1,13 +1,27 @@
-{{#link-to 'index'}}
-  Introduction
-{{/link-to}}
-{{#link-to 'button'}}
-  Button
-{{/link-to}}
-{{#link-to 'select'}}
-  Select
-{{/link-to}}
-{{#link-to 'table'}}
-  Table
-{{/link-to}}
-{{outlet}}
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+      {{#link-to 'index' class="nav-link"}}
+        Introduction
+      {{/link-to}}
+    </li>
+    <li class="nav-item">
+      {{#link-to 'button' class="nav-link"}}
+        Button
+      {{/link-to}}
+    </li>
+    <li class="nav-item">
+      {{#link-to 'select' class="nav-link"}}
+        Select
+      {{/link-to}}
+    </li>
+    <li class="nav-item">
+      {{#link-to 'table' class="nav-link"}}
+        Table
+      {{/link-to}}
+    </li>
+  </ul>
+</nav>
+<div class="container-fluid">
+    {{outlet}}
+</div>

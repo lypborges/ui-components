@@ -24,7 +24,7 @@ export default Component.extend({
   page: 1,
   limit: 10,
   dir: 'asc',
-  sort: 'firstName',
+  sort: '',
 
   isLoading: computed.oneWay('fetchRecords.isRunning'),
   canLoadMore: true,
@@ -67,18 +67,11 @@ export default Component.extend({
   loadMore: task(function*(){
     if (this.get('canLoadMore')) {
       this.incrementProperty('page');
-      this.get('fetchRecords').perform();
+      yield this.get('fetchRecords').perform();
     }
   }).restartable(),
 
   actions: {
-    onScrolledToBottom() {
-      if (this.get('canLoadMore')) {
-        this.incrementProperty('page');
-        this.get('fetchRecords').perform();
-      }
-    },
-
     onColumnClick(column) {
       if (column.sorted) {
         this.setProperties({

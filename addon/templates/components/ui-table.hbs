@@ -1,4 +1,4 @@
-{{#light-table table tableClassNames="table table-hover" height='85vh' columns=columns responsive=true onAfterResponsiveChange=(action 'onAfterResponsiveChange') as |t| }}
+{{#light-table table tableClassNames="table table-hover" height='85vh' columns=columns as |t| }}
 
   {{t.head onColumnClick=(action 'onColumnClick') iconSortable='fa fa-sort' iconAscending='fa fa-sort-asc' iconDescending='fa fa-sort-desc' fixed=true}}
 

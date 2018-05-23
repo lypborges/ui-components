@@ -23,7 +23,6 @@ After install you need to add some imports into you `app.scss`:
 ```
 @import 'ember-power-select/themes/bootstrap';
 @import "ember-power-select";
-@import 'ember-burger-menu';
 @import "ember-cli-bootstrap-4/bootstrap";
 ```
 

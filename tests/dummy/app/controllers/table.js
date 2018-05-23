@@ -4,11 +4,6 @@ import { computed } from '@ember/object';
 export default Controller.extend({
   columns: computed(function() {
    return [{
-     width: '40px',
-     sortable: false,
-     cellComponent: 'ui-row-toggle',
-     breakpoints: ['mobile', 'tablet', 'desktop']
-   }, {
      label: 'First Name',
      valuePath: 'firstName',
    }, {
