@@ -1,17 +1,13 @@
-{{#docs-viewer as |viewer|}}
-
-  {{#viewer.nav as |nav|}}
-    {{nav.item 'Introduction' 'docs.index'}}
-    {{nav.item 'Button' 'docs.button'}}
-    {{nav.item 'Select' 'docs.select'}}
-  {{/viewer.nav}}
-
-  {{#viewer.main}}
-    <div class="docs-container">
-      <div class="docs-section">
-        {{outlet}}
-      </div>
-    </div>
-  {{/viewer.main}}
-
-{{/docs-viewer}}
+{{#link-to 'index'}}
+  Introduction
+{{/link-to}}
+{{#link-to 'button'}}
+  Button
+{{/link-to}}
+{{#link-to 'select'}}
+  Select
+{{/link-to}}
+{{#link-to 'table'}}
+  Table
+{{/link-to}}
+{{outlet}}

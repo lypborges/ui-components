@@ -1,4 +1,3 @@
-// BEGIN-SNIPPET docs-select.js
 import Controller from '@ember/controller';
 import {
   task
@@ -17,4 +16,3 @@ export default Controller.extend({
     },
   }
 });
-// END-SNIPPET

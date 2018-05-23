@@ -1,0 +1,19 @@
+<h1>Button types!</h1>
+<p>
+  You can pass any class that bootstrap has in a button! <a href="https://getbootstrap.com/docs/4.0/components/buttons/" target="_blank">See options here</a>
+</p>
+
+{{ui-button class="btn-primary" label="Primary"}}
+{{ui-button class="btn-secondary" label="Secondary"}}
+{{ui-button class="btn-success" label="Success"}}
+{{ui-button class="btn-danger" label="Danger"}}
+{{ui-button class="btn-warning" label="Warning"}}
+{{ui-button class="btn-info" label="Info"}}
+<p>
+  <b>Block Buttons!</b> Let's make this button bigger!
+</p>
+{{ui-button class='btn-primary btn-lg btn-block' label="Block Primary"}}
+<p>
+  <b>The loading state!</b> Button with a async Task. In this case the asyncTask is declared in the controller, but could be in the parente component too. We use <a href="http://ember-concurrency.com/" target="_blank">ember-concurrency</a> to handle task.
+</p>
+{{ui-button class="btn-primary" label="Primary" asyncTask=asyncTask}}
