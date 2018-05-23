@@ -2,13 +2,14 @@ import Controller from '@ember/controller';
 import {
   task
 } from 'ember-concurrency';
-import fetch from 'fetch';
+import { inject as service } from '@ember/service';
 
 export default Controller.extend({
-  searchRemote: task(function*(term) {
-    let url = `https://api.github.com/search/repositories?q=${term}`;
-    let response = yield fetch(url).then((resp) => resp.json()).then((json) => json.items);
-    return response;
+  store: service(),
+  searchRemote: task(function*() {
+    return yield this.get('store').query('user', {}).then((users) => {
+      return users;
+    });
   }).drop(),
   actions: {
     myChangeAction(selected) {

@@ -7,6 +7,9 @@ module.exports = function(defaults) {
     // Add options here
     'ember-font-awesome': {
       includeFontFiles: false
+    },
+    'ember-cli-bootstrap-4': {
+      js: null
     }
   });
 
