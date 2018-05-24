@@ -1,19 +1,34 @@
-<h1>Button types!</h1>
+<h3 class="display-4 text-center">Buttons</h3>
 <p>
   You can pass any class that bootstrap has in a button! <a href="https://getbootstrap.com/docs/4.0/components/buttons/" target="_blank">See options here</a>
 </p>
+<div class="row justify-content-center pb-4">
+  <div class="col-sm-4">
+    {{ui-button class="btn-primary btn-block" label="Primary" asyncTask=asyncTask}}
+  </div>
+  <div class="col-sm-4">
+    {{ui-button class="btn-secondary btn-block" label="Secondary" asyncTask=asyncTask}}
+  </div>
+  <div class="col-sm-4">
+    {{ui-button class="btn-success btn-block" label="Success" asyncTask=asyncTask}}
+  </div>
+</div>
+<div class="row justify-content-center pb-4">
+  <div class="col-sm-4">
+    {{ui-button class="btn-danger btn-block" label="Danger" asyncTask=asyncTask}}
+  </div>
+  <div class="col-sm-4">
+    {{ui-button class="btn-warning btn-block" label="Warning" asyncTask=asyncTask}}
+  </div>
+  <div class="col-sm-4">
+    {{ui-button class="btn-info btn-block" label="Info" asyncTask=asyncTask}}
+  </div>
+</div>
 
-{{ui-button class="btn-primary" label="Primary"}}
-{{ui-button class="btn-secondary" label="Secondary"}}
-{{ui-button class="btn-success" label="Success"}}
-{{ui-button class="btn-danger" label="Danger"}}
-{{ui-button class="btn-warning" label="Warning"}}
-{{ui-button class="btn-info" label="Info"}}
 <p>
   <b>Block Buttons!</b> Let's make this button bigger!
 </p>
-{{ui-button class='btn-primary btn-lg btn-block' label="Block Primary"}}
+{{ui-button class='btn-primary btn-lg btn-block' label="Block Primary" asyncTask=asyncTask}}
 <p>
-  <b>The loading state!</b> Button with a async Task. In this case the asyncTask is declared in the controller, but could be in the parente component too. We use <a href="http://ember-concurrency.com/" target="_blank">ember-concurrency</a> to handle task.
+  <b>The loading state!</b> Button with a async Task. In this case the asyncTask is declared in the controller, but could be in the parente component too. You should use <a href="http://ember-concurrency.com/" target="_blank">ember-concurrency</a> to handle task.
 </p>
-{{ui-button class="btn-primary" label="Primary" asyncTask=asyncTask}}
