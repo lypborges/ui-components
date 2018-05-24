@@ -1,1 +1,1 @@
-export { default } from 'ui-components/components/ui-table-loader';
+export { default } from 'ui-components/components/ui-table/ui-table-loader';

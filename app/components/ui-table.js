@@ -1,1 +1,1 @@
-export { default } from 'ui-components/components/ui-table';
+export { default } from 'ui-components/components/ui-table/ui-table';

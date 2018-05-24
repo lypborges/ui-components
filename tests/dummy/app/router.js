@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('button');
   this.route('select');
   this.route('table');
+  this.route('datepicker');
 });
 
 

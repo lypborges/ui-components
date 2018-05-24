@@ -1,5 +1,5 @@
 import Component from '@ember/component';
-import layout from '../templates/components/ui-table';
+import layout from 'ui-components/templates/components/ui-table/ui-table';
 import {
   computed
 } from '@ember/object';
