@@ -1730,7 +1730,7 @@ broccoli-writer@^0.1.1:
     quick-temp "^0.1.0"
     rsvp "^3.0.6"
 
-browserslist@^3.2.6:
+browserslist@^3.1.1, browserslist@^3.2.6:
   version "3.2.8"
   resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-3.2.8.tgz#b0005361d6471f0f5952797a76fc985f1f978fc6"
   dependencies:
@@ -2945,6 +2945,13 @@ ember-data@^3.1.1:
     semver "^5.1.0"
     silent-error "^1.0.0"
 
+ember-diff-attrs@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/ember-diff-attrs/-/ember-diff-attrs-0.2.1.tgz#ad9592ab8ba63d796bb9b1633801fe27ca43fc74"
+  dependencies:
+    ember-cli-babel "^6.6.0"
+    ember-weakmap "^3.0.0"
+
 ember-disable-prototype-extensions@^1.1.2:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/ember-disable-prototype-extensions/-/ember-disable-prototype-extensions-1.1.3.tgz#1969135217654b5e278f9fe2d9d4e49b5720329e"
@@ -2983,6 +2990,16 @@ ember-fetch@^4.0.1:
     ember-cli-babel "^6.8.2"
     node-fetch "^2.0.0-alpha.9"
     yetch "^0.0.1"
+
+ember-flatpickr@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/ember-flatpickr/-/ember-flatpickr-2.5.0.tgz#e32b4e475fadd2c16d6582496dca39dea0ff1238"
+  dependencies:
+    ember-cli-babel "^6.6.0"
+    ember-cli-node-assets "^0.2.2"
+    ember-diff-attrs "^0.2.1"
+    fastboot-transform "^0.1.3"
+    flatpickr "^4.4.6"
 
 ember-font-awesome@^4.0.0-rc.3:
   version "4.0.0-rc.3"
@@ -3244,6 +3261,14 @@ ember-try@^0.2.23:
     rimraf "^2.3.2"
     rsvp "^3.0.17"
     semver "^5.1.0"
+
+ember-weakmap@^3.0.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/ember-weakmap/-/ember-weakmap-3.2.0.tgz#663871d7a8bb085c5b1cedcb3fb183857990343f"
+  dependencies:
+    browserslist "^3.1.1"
+    debug "^3.1.0"
+    ember-cli-babel "^6.6.0"
 
 ember-wormhole@^0.5.1, ember-wormhole@^0.5.4:
   version "0.5.4"
@@ -3734,7 +3759,7 @@ fast-sourcemap-concat@^1.0.1:
     source-map-url "^0.3.0"
     sourcemap-validator "^1.0.5"
 
-fastboot-transform@^0.1.2:
+fastboot-transform@^0.1.2, fastboot-transform@^0.1.3:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/fastboot-transform/-/fastboot-transform-0.1.3.tgz#7dea0b117594afd8772baa6c9b0919644e7f7dcd"
   dependencies:
@@ -3856,6 +3881,10 @@ flat-cache@^1.2.1:
     del "^2.0.2"
     graceful-fs "^4.1.2"
     write "^0.2.1"
+
+flatpickr@^4.4.6:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/flatpickr/-/flatpickr-4.5.0.tgz#f72c7164a1c24e3ad419e3b2209d1a2d3604724a"
 
 follow-redirects@^1.0.0:
   version "1.5.0"

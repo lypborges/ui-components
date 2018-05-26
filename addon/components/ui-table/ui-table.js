@@ -58,7 +58,8 @@ export default Component.extend({
   },
 
   fetchRecords: task(function*() {
-    let records = yield this.get('store').query('user', this.getProperties(['page', 'limit', 'sort', 'dir']));
+    let url = this.get('modelName');
+    let records = yield this.get('store').query(url, this.getProperties(['page', 'limit', 'sort', 'dir']));
     this.get('model').pushObjects(records.toArray());
     this.set('meta', records.get('meta'));
     this.set('canLoadMore', !isEmpty(records));

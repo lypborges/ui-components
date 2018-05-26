@@ -15,5 +15,6 @@ export default Mirage.Factory.extend({
   username: faker.internet.userName,
   avatar: faker.internet.avatar,
   bio: faker.lorem.paragraph,
+  birthday: '2018-12-27',
   color: () => faker.random.arrayElement(MATERIAL_UI_COLORS)
 });

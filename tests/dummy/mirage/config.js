@@ -11,7 +11,7 @@ export default function() {
     Note: these only affect routes defined *after* them!
   */
 
-
+  this.get('/users/:id'); 
   this.get('/users', function(schema, request) {
     let { page, limit, sort, dir } = request.queryParams;
     const collection = schema.users.all();

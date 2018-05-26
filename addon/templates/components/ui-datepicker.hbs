@@ -1,1 +1,11 @@
-{{yield}}
+{{ember-flatpickr
+    disabled=disabled
+    altFormat=altFormat
+    locale=locale
+    altInput=true
+    allowInput=true
+    placeholder=placeholder
+    defaultDate=dateValue
+    date=(readonly dateValue)
+    onChange=(action onChange)
+  }}

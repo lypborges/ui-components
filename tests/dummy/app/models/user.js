@@ -12,5 +12,6 @@ export default Model.extend({
   username: attr('string'),
   avatar: attr('string'),
   bio: attr('string'),
-  color: attr('string')
+  color: attr('string'),
+  birthday: attr('string')
 });

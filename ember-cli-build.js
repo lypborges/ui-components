@@ -10,6 +10,9 @@ module.exports = function(defaults) {
     },
     'ember-cli-bootstrap-4': {
       js: null
+    },
+    flatpickr: {
+      locales: ['pt']
     }
   });
 
