@@ -1,4 +1,4 @@
-<h3 class="display-4 text-center">Select</h3>
+<h3 class="display-4 text-center">Single and multiple select</h3>
 <p>
   The select component is a wrapper in the
   <a href="https://ember-power-select.com/docs/" target="_blank">power-select</a>
@@ -6,10 +6,24 @@
   We just try to keep some pre set samples for usual cases. Like this one, search for
   some object in a remote API.
 </p>
-
+<label>Select</label>
+{{!-- BEGIN-SNIPPET ui-select --}}
 {{ui-select
   onChange=(action "myChangeAction")
   selected=selected
   displayKey="firstName"
   searchRemote=searchRemote
 }}
+{{!-- END-SNIPPET --}}
+{{code-snippet name="ui-select.hbs"}}
+
+<label>Multiple Select</label>
+{{!-- BEGIN-SNIPPET ui-multi-select --}}
+{{ui-multi-select
+  onChange=(action "myChangeAction")
+  selected=selected
+  displayKey="firstName"
+  searchRemote=searchRemote
+}}
+{{!-- END-SNIPPET --}}
+{{code-snippet name="ui-multi-select.hbs"}}

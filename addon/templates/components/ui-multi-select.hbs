@@ -1,0 +1,26 @@
+<div class="field">
+  {{#if label}}
+    <label>{{label}}</label>
+  {{/if}}
+  {{#power-select-multiple
+    translatePrefix=translatePrefix
+    disabled=disabled
+    options=options
+    search=(perform searchRemote)
+    searchEnabled=searchEnabled
+    selected=selected
+    placeholder=placeholder
+    searchPlaceholder=searchPlaceholder
+    onchange=(action onChange)
+    destination="customized-destination"
+    buildSuggestion=buildSuggestion
+    searchMessage=searchMessage
+    loadingMessage=loadingMessage
+    noMatchesMessage=noMatchesMessage
+    allowClear=allowClear
+    renderInPlace=true as |result|
+  }}
+    {{get result displayKey}}
+  {{/power-select-multiple}}
+</div>
+<div id="customized-destination"></div>

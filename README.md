@@ -31,6 +31,7 @@ After install you need to add some imports into you `app.scss`:
 
 - [x] Button
 - [x] Select
+- [x] Multiple Select
 - [x] DatePicker
 - [x] DatePicker Range
 - [x] Table
