@@ -31,12 +31,12 @@ After install you need to add some imports into you `app.scss`:
 
 - [x] Button
 - [x] Select
-- [ ] DatePicker
+- [x] DatePicker
 - [ ] DatePicker Range
+- [x] Table
 - [ ] Input
-- [ ] Toaster
-- [ ] Table
 - [ ] Form
+- [ ] Toaster
 - [ ] Modal
 - [ ] Menu
 - [ ] Acceptance Test

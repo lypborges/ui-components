@@ -3,21 +3,49 @@
 </h1>
 <p class="lead">
   This component is build on top of <a href="https://github.com/shipshapecode/ember-flatpickr">Ember Flatpickr</a>.
-  <a href="https://flatpickr.js.org/">Flatpikr</a> is a very lightweight and powerful date/time picker.
-  You can pass config <a href="https://flatpickr.js.org/options/" target="_blank">options</a> to flatpickr.
+  <a href="https://flatpickr.js.org/">Flatpikr</a> is a very lightweight and powerful date/time picker. You can pass config <a href="https://flatpickr.js.org/options/" target="_blank">options</a> to flatpickr.
 </p>
-<div class="row pt-4">
-  <h4>Date Input</h4>
-  <p class="lead">
-    By convetion you can choose the locale to translation.
-    But to format how the date is format for the user you should pass altFormat.
-    Note that the date that is sent to the backend (the real input value) is always as the defaults format (YYYY-MM-DD HH:MM)
-This means that "2016" "2016-10", "2016-10-20", "2016-10-20 15", "2016-10-20 15:30" are all valid date strings
-  </p>
-  {{ui-datepicker
-    locale="pt"
+<h4>Date Input</h4>
+<p class="lead">
+  By convetion you can choose the locale to translation. But to format how the date is format for the user you should pass altFormat. Note that the date that is sent to the backend (the real input value) is always as the defaults format (YYYY-MM-DD HH:MM)
+  This means that "2016" "2016-10", "2016-10-20", "2016-10-20 15", "2016-10-20 15:30" are all valid date strings
+</p>
+{{ui-datepicker
+    locale=locale
     altFormat='d-m-Y'
     dateValue=model.birthday
   }}
-  <b class="pl-4">Input value</b>: {{model.birthday}}
-</div>
+<b>Input value</b>: {{model.birthday}}
+<h4 class="pt-4">Change Locale</h4>
+<p class="lead">
+  Flatpikr support a lot of languages you can see all <a href="https://github.com/flatpickr/flatpickr/tree/master/src/l10n" target="_blank">here</a>.
+</p>
+{{code-snippet name="ui-datepicker-format.hbs"}}
+<form>
+  <div class="row">
+    <div class="col">
+      {{ui-input value=altFormat}}
+    </div>
+    <div class="col">
+      {{ui-select
+          options=locales
+          onChange=(action (mut locale))
+          selected=locale
+          searchEnabled=false
+          displayKey="label"
+        }}
+    </div>
+    <div class="col">
+      {{!-- BEGIN-SNIPPET ui-datepicker-format --}}
+      {{ui-datepicker
+          locale=locale.code
+          altFormat=altFormat
+          dateValue=model.birthday
+        }}
+      {{!-- END-SNIPPET --}}
+    </div>
+    <div class="col">
+      {{model.birthday}}
+    </div>
+  </div>
+</form>

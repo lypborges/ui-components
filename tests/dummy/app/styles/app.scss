@@ -6,10 +6,9 @@
 // $danger:        $red !default;
 // $light:         $gray-100 !default;
 // $dark:          $gray-800 !default;
-
+@import "ember-cli-bootstrap-4/bootstrap";
 @import 'ember-power-select/themes/bootstrap';
 @import "ember-power-select";
-@import "ember-cli-bootstrap-4/bootstrap";
 
 body {
   background-color: #fff;

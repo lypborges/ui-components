@@ -12,8 +12,10 @@ module.exports = function(defaults) {
       js: null
     },
     flatpickr: {
-      locales: ['pt']
-    }
+      locales: ['pt', 'ru']
+    },
+    snippetPaths: ['tests/dummy/snippets'],
+    snippetSearchPaths: ['app', 'tests/dummy/app', 'addon'],
   });
 
   /*
