@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('select');
   this.route('table');
   this.route('datepicker');
+  this.route('daterange');
 });
 
 

@@ -10,11 +10,18 @@
   By convetion you can choose the locale to translation. But to format how the date is format for the user you should pass altFormat. Note that the date that is sent to the backend (the real input value) is always as the defaults format (YYYY-MM-DD HH:MM)
   This means that "2016" "2016-10", "2016-10-20", "2016-10-20 15", "2016-10-20 15:30" are all valid date strings
 </p>
+<p class="lead">
+  To use it, just need to declare the dateValue, locale and the altFormat. The last is used for the component to show the value for the user. Read more <a href="https://flatpickr.js.org/options/" target="_blank">here</a>.
+</p>
+{{code-snippet name="ui-datepicker.hbs"}}
+<label>Datepicker</label>
+{{!-- BEGIN-SNIPPET ui-datepicker --}}
 {{ui-datepicker
-    locale=locale
+    locale='pt'
     altFormat='d-m-Y'
     dateValue=model.birthday
   }}
+{{!-- END-SNIPPET --}}
 <b>Input value</b>: {{model.birthday}}
 <h4 class="pt-4">Change Locale</h4>
 <p class="lead">
@@ -24,9 +31,11 @@
 <form>
   <div class="row">
     <div class="col">
+      <label>altForm</label>
       {{ui-input value=altFormat}}
     </div>
     <div class="col">
+      <label>Locale</label>
       {{ui-select
           options=locales
           onChange=(action (mut locale))
@@ -36,6 +45,7 @@
         }}
     </div>
     <div class="col">
+      <label>Datepicker</label>
       {{!-- BEGIN-SNIPPET ui-datepicker-format --}}
       {{ui-datepicker
           locale=locale.code
@@ -45,7 +55,8 @@
       {{!-- END-SNIPPET --}}
     </div>
     <div class="col">
-      {{model.birthday}}
+      <label>Value</label>
+      <p class="text-middle">{{model.birthday}}</p>
     </div>
   </div>
 </form>
