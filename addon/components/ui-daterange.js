@@ -1,15 +1,15 @@
 import Component from '@ember/component';
-import layout from '../templates/components/ui-datepicker';
+import layout from '../templates/components/ui-daterange';
 import {
   run
 } from '@ember/runloop';
 
 export default Component.extend({
   layout,
-  mode: 'range',
   init() {
     this._super(...arguments);
     this.setDefaultActions();
+    this.set('mode',"range");
   },
   setDefaultActions(){
     let onChange = this.get('onChange');
