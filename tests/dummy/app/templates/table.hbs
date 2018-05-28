@@ -2,7 +2,16 @@
 <p>
   We use a subset of functions in <a href="http://offirgolan.github.io/ember-light-table/">Ember Light Table</a>
 </p>
+<p>
+  All you need is to pass a modelName and columns and the table will try do fetch the data from the server using your model.
+  In the sample we use the controller to declare the columns, but you can pass from anywhere.
+</p>
+{{code-snippet name="ui-table-controller.js"}}
+
+{{code-snippet name="ui-table.hbs"}}
+{{!-- BEGIN-SNIPPET ui-table --}}
 {{ui-table columns=columns modelName='user'}}
+{{!-- END-SNIPPET --}}
 {{#link-to 'datepicker' class="nav-link" }}
   Datepicker
 {{/link-to}}

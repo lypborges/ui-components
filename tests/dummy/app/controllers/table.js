@@ -1,3 +1,4 @@
+//BEGIN-SNIPPET ui-table-controller
 import Controller from '@ember/controller';
 import { computed } from '@ember/object';
 
@@ -9,19 +10,16 @@ export default Controller.extend({
    }, {
      label: 'Last Name',
      valuePath: 'lastName',
-     breakpoints: ['tablet', 'desktop', 'jumbo']
    }, {
      label: 'Address',
      valuePath: 'address',
-     breakpoints: ['tablet', 'desktop', 'jumbo']
    }, {
      label: 'State',
      valuePath: 'state',
-     breakpoints: ['desktop', 'jumbo']
    }, {
      label: 'Country',
      valuePath: 'country',
-     breakpoints: ['jumbo']
    }];
  })
 });
+//END-SNIPPET

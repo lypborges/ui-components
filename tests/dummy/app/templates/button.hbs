@@ -2,9 +2,12 @@
 <p>
   You can pass any class that bootstrap has in a button! <a href="https://getbootstrap.com/docs/4.0/components/buttons/" target="_blank">See options here</a>
 </p>
+{{code-snippet name="ui-button.hbs"}}
 <div class="row justify-content-center pb-4">
   <div class="col-sm-4">
+    {{!-- BEGIN-SNIPPET ui-button --}}
     {{ui-button class="btn-primary btn-block" label="Primary" asyncTask=asyncTask}}
+    {{!-- END-SNIPPET --}}
   </div>
   <div class="col-sm-4">
     {{ui-button class="btn-secondary btn-block" label="Secondary" asyncTask=asyncTask}}
@@ -28,7 +31,10 @@
 <p>
   <b>Block Buttons!</b> Let's make this button bigger!
 </p>
-{{ui-button class='btn-primary btn-lg btn-block' label="Block Primary" asyncTask=asyncTask}}
+{{code-snippet name="ui-button-large.hbs"}}
+{{!-- BEGIN-SNIPPET ui-button-large --}}
+{{ui-button class="btn-primary btn-lg btn-block" label="Block Primary" asyncTask=asyncTask}}
+{{!-- END-SNIPPET --}}
 <p>
   <b>The loading state!</b> Button with a async Task. In this case the asyncTask is declared in the controller, but could be in the parente component too. You should use <a href="http://ember-concurrency.com/" target="_blank">ember-concurrency</a> to handle task.
 </p>
