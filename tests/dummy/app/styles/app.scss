@@ -17,3 +17,15 @@ body {
 main {
   height: 100vh;
 }
+
+ul.check-list {
+  list-style: none;
+}
+
+ul.check-list li.checked:before {
+  content: '[x] ';
+}
+
+ul.check-list li:before {
+  content: '[ ] ';
+}
