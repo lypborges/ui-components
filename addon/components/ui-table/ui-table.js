@@ -59,10 +59,12 @@ export default Component.extend({
 
   fetchRecords: task(function*() {
     let url = this.get('modelName');
-    let records = yield this.get('store').query(url, this.getProperties(['page', 'limit', 'sort', 'dir']));
-    this.get('model').pushObjects(records.toArray());
-    this.set('meta', records.get('meta'));
-    this.set('canLoadMore', !isEmpty(records));
+    if (url) {
+      let records = yield this.get('store').query(url, this.getProperties(['page', 'limit', 'sort', 'dir']));
+      this.get('model').pushObjects(records.toArray());
+      this.set('meta', records.get('meta'));
+      this.set('canLoadMore', !isEmpty(records));
+    }
   }).restartable(),
 
   loadMore: task(function*(){

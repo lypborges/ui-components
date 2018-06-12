@@ -14,13 +14,5 @@ module('Integration | Component | ui-select', function(hooks) {
 
     assert.equal(this.element.textContent.trim(), '');
 
-    // Template block usage:
-    await render(hbs`
-      {{#ui-select}}
-        template block text
-      {{/ui-select}}
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
   });
 });

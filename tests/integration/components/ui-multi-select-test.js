@@ -14,13 +14,5 @@ module('Integration | Component | ui-multi-select', function(hooks) {
 
     assert.equal(this.element.textContent.trim(), '');
 
-    // Template block usage:
-    await render(hbs`
-      {{#ui-multi-select}}
-        template block text
-      {{/ui-multi-select}}
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
   });
 });

@@ -14,13 +14,5 @@ module('Integration | Component | ui-table-loader', function(hooks) {
 
     assert.equal(this.element.textContent.trim(), '');
 
-    // Template block usage:
-    await render(hbs`
-      {{#ui-table-loader}}
-        template block text
-      {{/ui-table-loader}}
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
   });
 });
