@@ -9,18 +9,17 @@ module('Integration | Component | ui-table', function(hooks) {
   test('it renders', async function(assert) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
+    let columns = [{
+      label: 'First Name',
+      valuePath: 'firstName',
+    }, {
+      label: 'Last Name',
+      valuePath: 'lastName',
+    }]
+    this.set('columns', columns);
+    await render(hbs`{{ui-table columns=columns}}`);
 
-    await render(hbs`{{ui-table}}`);
+    assert.equal(this.element.querySelectorAll('th').length, 2);
 
-    assert.equal(this.element.textContent.trim(), '');
-
-    // Template block usage:
-    await render(hbs`
-      {{#ui-table}}
-        template block text
-      {{/ui-table}}
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
   });
 });

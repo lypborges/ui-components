@@ -14,13 +14,5 @@ module('Integration | Component | ui-button', function(hooks) {
 
     assert.equal(this.element.textContent.trim(), '');
 
-    // Template block usage:
-    await render(hbs`
-      {{#ui-button}}
-        template block text
-      {{/ui-button}}
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
   });
 });

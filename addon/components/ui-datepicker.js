@@ -9,6 +9,9 @@ export default Component.extend({
   init() {
     this._super(...arguments);
     this.setDefaultActions();
+    this.set('locale', 'en');
+    this.set('altFormat','Y-m-d');
+
   },
   setDefaultActions(){
     let onChange = this.get('onChange');
