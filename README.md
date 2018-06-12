@@ -2,6 +2,7 @@ Quickstart
 ==============================================================================
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/lypborges/ui-components.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/lypborges/ui-components.svg?branch=master)](https://travis-ci.org/lypborges/ui-components)
 
 This addon is a wrapper from other addons that have solved some complex UI components that almost all application needs. You can see the list in the todo section.
 So to keep consistence over any other application we have created this addon to expose and include the most common used components
